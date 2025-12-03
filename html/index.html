@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Market</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="blackmarket-container" style="display: none;">
+        <div class="blackmarket-overlay"></div>
+        
+        <div class="blackmarket-content">
+            <div class="market-header">
+                <div class="header-left">
+                    <div class="skull-icon">☠</div>
+                    <h1>BLACK MARKET</h1>
+                </div>
+                <div class="header-right">
+                    <div class="money-display">
+                        <span class="money-icon">💰</span>
+                        <span id="player-money">$0</span>
+                    </div>
+                    <button class="close-btn" id="close-btn">✕</button>
+                </div>
+            </div>
+
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Tout</button>
+                <button class="category-btn" data-category="weapons">Armes</button>
+                <button class="category-btn" data-category="tools">Outils</button>
+                <button class="category-btn" data-category="ammo">Munitions</button>
+                <button class="category-btn" data-category="protection">Protection</button>
+            </div>
+
+            <div class="items-grid" id="items-grid">
+            </div>
+        </div>
+
+        <div id="buy-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Acheter</h2>
+                    <button class="modal-close" id="modal-close">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div id="modal-image"></div>
+                    <p id="modal-description"></p>
+                    <div class="price-info">
+                        <span class="price-label">Prix unitaire:</span>
+                        <span id="modal-price" class="price-value">$0</span>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="qty-minus">-</button>
+                        <input type="number" id="quantity-input" value="1" min="1" max="100">
+                        <button class="qty-btn" id="qty-plus">+</button>
+                    </div>
+                    <div class="total-price">
+                        <span>Total:</span>
+                        <span id="total-price">$0</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-cancel" id="btn-cancel">Annuler</button>
+                    <button class="btn-confirm" id="btn-confirm">Confirmer l'achat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
